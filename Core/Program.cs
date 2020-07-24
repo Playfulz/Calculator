@@ -66,7 +66,7 @@ namespace Calculator.Core
             if (Context.User.IsBot) return;
             int argPos = 0;
             
-            if (!Message.HasStringPrefix(";", ref argPos) && !Message.HasMentionPrefix(_client.CurrentUser, ref argPos)) {
+            if (!Message.HasStringPrefix("-", ref argPos) && !Message.HasMentionPrefix(_client.CurrentUser, ref argPos)) {
                 return;
             }
 
