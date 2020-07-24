@@ -9,11 +9,11 @@ namespace Calculator.Core {
     public static class UserAccounts {
         private static List<UserAccount> accounts;
 
-        private static string accountsFile = "";
+        private static string accountsFile = "Core/Data/Accounts.json";
 
         static UserAccounts() {
-            if (data.SavedExists(accountsFile))
-                accounts = data.LoadUserAccounts(accountsFile).ToList();
+            if (AccountStorage.SavedExists(accountsFile))
+                accounts = AccountStorage.LoadUserAccounts(accountsFile).ToList();
             else {
                 accounts = new List<UserAccount>();
                 SaveAccounts();
@@ -21,7 +21,7 @@ namespace Calculator.Core {
         }
 
         public static void SaveAccounts() {
-            data.SaveUserAccounts(accounts, accountsFile);
+            AccountStorage.SaveUserAccounts(accounts, accountsFile);
         }
 
         public static UserAccount GetAccount(SocketUser user) {
@@ -40,8 +40,7 @@ namespace Calculator.Core {
         }
         
         private static UserAccount CreateUserAccount(ulong id) {
-            var newAccount = new UserAccount()
-            {
+            var newAccount = new UserAccount() {
                 ID = id,
             };
 
