@@ -35,7 +35,7 @@ namespace Calculator.Core {
             
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), null);
 
-            string token = process.env.TOKEN;
+            string token = GetEnvironmentVariable("TOKEN");
             
             _client.MessageReceived += ClientMessageReceived;
             _client.Ready += ClientReady;
