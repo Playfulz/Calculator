@@ -40,7 +40,7 @@ namespace Calculator.Core
             _client.MessageReceived += ClientMessageReceived;
             _client.Ready += ClientReady;
             _client.Log += ClientLog;
-            string token = "NTkxNzA4MzMzODkxNjQ5NTQ2.Xtfz9Q.36Gb3j9GF0HG5289G_wnssgaLKY";
+            string token = "NTkxNzA4MzMzODkxNjQ5NTQ2.XQ0tVA.hfSI1eRiCvn9zOsyLQXfQ2zjG6I";
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
