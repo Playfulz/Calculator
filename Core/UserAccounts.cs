@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
-using stuf.Commands;
-using stuf.Core.UserAccounts;
 
-namespace stuf.Core.UserAccounts
+namespace Calculator.Core
 {
     public static class UserAccounts
     {
         private static List<UserAccount> accounts;
 
-        private static string accountsFile = "Resources/accounts.json";
+        private static string accountsFile = "";
 
         static UserAccounts()
         {
@@ -53,23 +51,10 @@ namespace stuf.Core.UserAccounts
             var newAccount = new UserAccount()
             {
                 ID = id,
-                Cherries = 100,
-                XP = 0,
-                Baguette = 0, 
-                ChallengesCompleted = new List<Commands.Challenges.Challenge>(),
             };
 
             accounts.Add(newAccount);
             return newAccount;
-        }
-        public static List<uint> GetAllCherries()
-        {
-            List<uint> cherries = new List<uint>();
-            foreach (var user in accounts)
-            {
-                cherries.Add(user.Cherries);
-            }
-            return cherries;
         }
         public static List<UserAccount> GetAllUsers()
         {
@@ -77,15 +62,6 @@ namespace stuf.Core.UserAccounts
             foreach (var user in accounts)
             {
                 cherries.Add(user);
-            }
-            return cherries;
-        }
-        public static List<uint> GetAllXP()
-        {
-            List<uint> cherries = new List<uint>();
-            foreach (var user in accounts)
-            {
-                cherries.Add(user.XP);
             }
             return cherries;
         }
