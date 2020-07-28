@@ -1,1 +1,5 @@
 *.env
+*Calculator.csproj
+*obj/
+*.vscode/
+*bin/
