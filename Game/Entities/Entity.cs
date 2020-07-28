@@ -61,16 +61,16 @@ namespace Calculator.Game.Entities {
 
 
         public Entity(int appearance, int[] stats) {
-            _appearance = appearance;
+            Appearance = appearance;
             Stats = new int[9];
             for(int i = 0; i < stats.Length; i++) {
                 Stats[i] = stats[i];
             }
-            Stats[8] = Math.Sqrt(stats[7] / 50);
+            Stats[8] = Math.Floor(Math.Sqrt(xp / 50));
         }
         
         public Entity(int appearance, int hp, int atk, int def, int magic, int magdef, int speed, int gold, int xp) {
-            _appearance = appearance;
+            Appearance = appearance;
             Stats = new int[9];
             Stats[0] = hp;
             Stats[1] = atk;
@@ -80,7 +80,7 @@ namespace Calculator.Game.Entities {
             Stats[5] = speed;
             Stats[6] = gold;
             Stats[7] = xp;
-            Stats[8] = Math.Sqrt(xp / 50);
+            Stats[8] = Math.Floor(Math.Sqrt(xp / 50));
         }
 
         public override string ToString() {
