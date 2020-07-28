@@ -1,4 +1,4 @@
-*.env
+*.json
 *Calculator.csproj
 *obj/
 *.vscode/

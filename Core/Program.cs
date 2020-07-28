@@ -4,6 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.IO;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -22,7 +24,10 @@ namespace Calculator.Core {
             admins.Add(620704612185407507);
             admins.Add(347015092854063115);
             admins.Add(283706696377827329);
-            
+            admins.Add(147422106215383040);
+            var json = File.ReadAllText("config.json");
+            var token = JsonConvert.DeserializeObject<Dictionary<string,string>>(json);
+
             _client = new DiscordSocketClient(new DiscordSocketConfig {
                 LogLevel = LogSeverity.Debug
             });
@@ -35,13 +40,11 @@ namespace Calculator.Core {
             
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), null);
 
-            string token = Environment.GetEnvironmentVariable("TOKEN");
-            
             _client.MessageReceived += ClientMessageReceived;
             _client.Ready += ClientReady;
             _client.Log += ClientLog;
             
-            await _client.LoginAsync(TokenType.Bot, token);
+            await _client.LoginAsync(TokenType.Bot, token["TOKEN"]);
             await _client.StartAsync();
             await Task.Delay(-1);
         }

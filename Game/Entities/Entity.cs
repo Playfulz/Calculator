@@ -17,40 +17,56 @@ namespace Calculator.Game.Entities {
             get {
                 return Stats[0];
             }
+            set {
+            }
         }
         public int Attack {
             get {
                 return Stats[1];
+            }
+            set {
             }
         }
         public int Defense {
             get {
                 return Stats[2];
             }
+            set {
+            }
         }
         public int Magic {
             get {
                 return Stats[3];
+            }
+            set {
             }
         }
         public int MagicDefense {
             get {
                 return Stats[4];
             }
+            set {
+            }
         }
         public int Speed {
             get {
                 return Stats[5];
+            }
+            set {
             }
         }
         public int Gold {
             get {
                 return Stats[6];
             }
+            set {
+            }
         }
         public int Xp {
             get {
                 return Stats[7];
+            }
+            set {
             }
         }
         public int Level {
@@ -66,7 +82,7 @@ namespace Calculator.Game.Entities {
             for(int i = 0; i < stats.Length; i++) {
                 Stats[i] = stats[i];
             }
-            Stats[8] = Math.Floor(Math.Sqrt(xp / 50));
+            Stats[8] = (int)Math.Floor(Math.Sqrt(Stats[7] / 50));
         }
         
         public Entity(int appearance, int hp, int atk, int def, int magic, int magdef, int speed, int gold, int xp) {
@@ -80,7 +96,7 @@ namespace Calculator.Game.Entities {
             Stats[5] = speed;
             Stats[6] = gold;
             Stats[7] = xp;
-            Stats[8] = Math.Floor(Math.Sqrt(xp / 50));
+            Stats[8] = (int)Math.Floor(Math.Sqrt(xp / 50));
         }
 
         public override string ToString() {

@@ -9,7 +9,7 @@ namespace Calculator.Game.Entities {
 
     public class AttackStorage {
 
-        public void Bite(Entity current, Entity other) {
+        public static void Bite(Entity current, Entity other) {
             other.Hp -= 1 + current.Attack;
         }
         
