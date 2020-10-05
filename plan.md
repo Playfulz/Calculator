@@ -79,7 +79,7 @@ x - Baby Bat. = 5| hp 10 def 0 atk 10
 >-0 - Skeleton. = 40| hp 80 def 25 atk 45
 
 
-Secret Enemies
+**Secret Enemies**
 
 0-("">^0^)< - Cat. = 100| hp 200 def 40 atk 50
 2x+3y-6z - Expression. = 125| hp 250 def 50 atk 35
@@ -87,13 +87,13 @@ BEE - "BEE". = 120| hp 240 def 50 atk 38
 1 - The REAL Forbidden One. 1000| hp 2000 def 75 atk 100
 74*9 - The Forbidden One. 666| hp 666 def 66 atk 66
 
-Secret Items
+**Secret Items**
 
 log() 
 sin() 
 Pi. 
 
-Bosses
+**Bosses**
 
 1234567890 - Calculator. = 1234567890| hp 1000 def 50 atk 123
 88log()sqr()sqr() - King tree ent. = 50| hp 100 def 10 atk 10
@@ -107,7 +107,7 @@ Bosses
 3() - King Slime. = 150| hp 300 def 10 (Splits into slime, then blob) atk 25
 30+< - King of Undead. = 300| hp 600 def 40  atk 50
 
-Areas
+**Areas**
 
 Plains
 Forest
@@ -123,7 +123,7 @@ Calculator Castle
 
 
 
-Stats for notepad
+**Stats for notepad**
 
 
 atk
@@ -140,7 +140,7 @@ gold = 1/10 of hp
 
 
 
-SHOP
+**SHOP**
 
 For snakes and lizard = poisonus spit/fangs 10 gold
 worm = hardend skin 10 gold increases def 10
@@ -152,7 +152,7 @@ tree ent = roots 10 gold 10 def
 
 
 
-MAG 
+**MAG** 
 
 10 mag = new move worm - call summons worm 10 hp 2 base all stats
 snakes(all) - Skinning creates decoy with same stats as player
