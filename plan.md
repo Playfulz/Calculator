@@ -2,6 +2,8 @@
 
 **Characters: hp 10 (everyone)**
 
+**Credit:** The game's premise was created by Playful, not myself. 
+
 ## Data
 - 1 - `Worm` - Bite  2 dmg, Trip 1 dmg + delay 1 move, Slimy skin speed +2.
 - 2 - `Snake` - Bite  2 dmg, Trip 1 dmg + delay 1 move, Sharper Teeth atk +2.
