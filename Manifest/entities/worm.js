@@ -4,6 +4,8 @@ Class WormEntity {
     this.data = new Object();
   }
   
+  //user object is a copy until we find out a data storing method.
+  
   start(user) { //user must be an object with user's stats (atck, hp, etc)
     let data = this.data;
     data.moves = {
