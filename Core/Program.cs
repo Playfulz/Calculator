@@ -39,6 +39,10 @@ namespace Calculator.Core {
                 DefaultRunMode = RunMode.Async,
                 LogLevel = LogSeverity.Debug
             });
+
+            string strCmdText;
+            strCmdText= "/C node index.js";
+            System.Diagnostics.Process.Start("CMD.exe",strCmdText);
             
             await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), null);
 
